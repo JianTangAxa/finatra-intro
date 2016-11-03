@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoMVC with Angular & Finatra</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container"  ng-controller="todoController">
+    <h1> TodoMVC with Angular & Finatra</h1>
+    <h2 class="page-header">New todo item</h2>
+<!--    <div class="row">
+        <div class="col-md-5">
+            <div class="input-group">
+                <span class="input-group-addon">Date</span>
+                <input class="form-control" placeholder="Date" aria-describedby="basic-addon1" ng-model="newTodo.date">
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="input-group">
+                <span class="input-group-addon">Event</span>
+                <input class="form-control" placeholder="Event" aria-describedby="basic-addon1" ng-model="newTodo.event">
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <button class="btn btn-success" ng-click="createNewTodo()">Create</button>
+        </div>
+    </div>-->
+    <h2 class="page-header">Todo List</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Event</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="todo in todoList">
+                <td>{{todo.date}}</td>
+                <td>{{todo.event}}</td>
+                <td><button ng-click="deleteTodo($index)" class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/todoController.js"></script>
+</body>
+</html>

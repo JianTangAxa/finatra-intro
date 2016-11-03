@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "dependencies": {
+    "angular": "^1.4.3",
+    "angular-resource": "^1.4.3",
+    "bootstrap":"^3.3.7"
+  }
+}
